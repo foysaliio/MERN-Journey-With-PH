@@ -1,0 +1,40 @@
+/* Z-index */
+
+.wrapper {
+  position: relative;
+  height: 200px;
+  width: 250px;
+  margin: 300px auto;
+  border: 1px solid green;
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  display: flex; /* For content (text) align Center example: z-index: 1, z-index: 2, z-index: 3 */
+  align-items: center;
+  justify-content: center;
+}
+
+.box-red {
+  background-color: crimson;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.box-blue {
+  background-color: royalblue;
+  top: 50px;
+  left: 60px;
+  z-index: 3;
+}
+
+.box-green {
+  background-color: seagreen;
+  top: 80px;
+  left: 100px;
+  z-index: 2;
+}
