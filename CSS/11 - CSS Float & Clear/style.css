@@ -1,0 +1,32 @@
+/* Float & Clear */
+
+.container {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.float-left {
+  float: left;
+  width: 150px;
+  height: 100px;
+  background-color: lightblue;
+  /* margin-right: 10px; */
+}
+
+.float-right {
+  float: right;
+  width: 150px;
+  height: 100px;
+  background-color: lightgreen;
+  /* margin-left: 10px; */
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
