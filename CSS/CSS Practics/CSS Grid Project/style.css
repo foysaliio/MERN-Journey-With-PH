@@ -1,0 +1,216 @@
+/* ============================
+   Reset & Base
+============================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f7f8fa;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* ============================
+   1. Magazine Layout
+============================ */
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.magazine-grid .m-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+}
+
+.m-featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url("https://picsum.photos/id/1015/500/500");
+}
+
+.m-tall {
+  grid-row: span 2;
+  background-image: url("https://picsum.photos/id/1016/300/500");
+}
+
+.m-wide {
+  grid-column: span 2;
+  background-image: url("https://picsum.photos/id/1018/500/300");
+}
+
+.m-normal {
+  background-image: url("https://picsum.photos/id/1020/300/300");
+}
+
+/* ============================
+   2. Dashboard Layout
+============================ */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  height: 500px;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.dash-header {
+  grid-area: header;
+  background-color: #1f2937;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 8px;
+}
+
+.dash-sidebar {
+  grid-area: sidebar;
+  background-color: #111827;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dash-sidebar ul {
+  list-style: none;
+}
+
+.dash-sidebar li {
+  padding: 10px 0;
+}
+
+.dash-main {
+  grid-area: main;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-content: start;
+}
+
+.dash-card {
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ============================
+   3. Image Gallery
+============================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ============================
+   4. Holy Grail Layout
+============================ */
+.holy-grail {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav content aside"
+    "footer footer footer";
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.holy-grail > div {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.hg-header {
+  grid-area: header;
+  background-color: #1f2937;
+  color: white;
+}
+
+.hg-nav {
+  grid-area: nav;
+}
+
+.hg-content {
+  grid-area: content;
+}
+
+.hg-aside {
+  grid-area: aside;
+}
+
+.hg-footer {
+  grid-area: footer;
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+}
+
+/* ============================
+   5. Responsive Card Grid (bonus)
+============================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card-grid .card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
