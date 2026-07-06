@@ -1,0 +1,32 @@
+/* Transform */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.transform-translate {
+  transform: translate(30px, 20px);
+}
+
+.transform-rotate {
+  transform: rotate(60deg);
+}
+
+.transform-scale {
+  transform: scale(1.5);
+}
+
+.transform-skew {
+  transform: skew(20deg, 10deg);
+}
+
+.transform-multiple {
+  transform: rotate(30deg) scale(1.3) translateX(10px) ;
+}
