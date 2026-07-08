@@ -1,0 +1,63 @@
+/* Pseudo Elements */
+
+/* ::before */
+.before-box::before {
+  content: "★ ";
+  color: gold;
+  font-weight: bold;
+}
+
+/* ::after */
+.after-box::after {
+  content: " (new)";
+  color: crimson;
+  font-size: 16px;
+}
+
+/* ::before + ::after together (badge style) */
+.badge::before {
+  content: "[ ";
+}
+
+.badge::after {
+  content: " ]";
+}
+
+/* ::first-letter */
+.first-letter p::first-letter {
+  font-size: 32px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+/* ::first-line */
+.first-line p::first-line {
+  color: teal;
+  font-weight: bold;
+}
+
+/* ::selection */
+.selection-box::selection {
+  background-color: gold;
+  color: black;
+}
+
+/* ::placeholder */
+.placeholder-input::placeholder {
+  color: dodgerblue;
+  font-style: italic;
+}
+
+/* content generated icon-style bullet using ::before on list */
+.custom-list li {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+}
+
+.custom-list li::before {
+  content: "✔";
+  color: green;
+  position: absolute;
+  left: 0;
+}
