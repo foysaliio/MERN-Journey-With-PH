@@ -1,0 +1,44 @@
+/* CSS Functions */
+
+.container {
+  width: 500px;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* calc() */
+.calc-box {
+  width: calc(100% - 60px);
+  background-color: coral;
+  padding: 10px;
+  color: white;
+}
+
+/* min() */
+.min-box {
+  width: min(80%, 300px);
+  background-color: teal;
+  padding: 10px;
+  color: white;
+}
+
+/* max() */
+.max-box {
+  width: max(50%, 250px);
+  background-color: darkslateblue;
+  padding: 10px;
+  color: white;
+}
+
+/* clamp(min, preferred, max) */
+.clamp-box {
+  width: clamp(150px, 50%, 400px);
+  background-color: seagreen;
+  padding: 10px;
+  color: white;
+}
+
+.clamp-text {
+  font-size: clamp(14px, 4vw, 28px);
+}
