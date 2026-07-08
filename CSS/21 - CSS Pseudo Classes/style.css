@@ -1,0 +1,51 @@
+/* Pseudo Classes */
+
+.box {
+  width: 150px;
+  padding: 15px;
+  background-color: lightgray;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* hover */
+.hover-box:hover {
+  background-color: teal;
+  color: white;
+}
+
+/* active */
+.active-box:active {
+  background-color: crimson;
+  color: white;
+}
+
+/* focus */
+.focus-input:focus {
+  outline: 2px solid dodgerblue;
+  background-color: #eef6ff;
+}
+
+/* first-child */
+.list-box li:first-child {
+  color: green;
+  font-weight: bold;
+}
+
+.list-box li:nth-child(3) {
+  color: rgb(44, 55, 155);
+  font-weight: bold;
+}
+
+
+.list-box li:nth-child(odd) {
+  text-decoration: underline;
+}
+
+
+
+/* last-child */
+.list-box li:last-child {
+  color: red;
+  font-weight: bold;
+}
