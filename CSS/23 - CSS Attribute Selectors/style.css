@@ -1,38 +1,109 @@
-/* Attribute Selectors */
+/* ============================
+   Attribute Selectors - Full
+============================ */
 
-/* [attr] - has attribute */
+.demo-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+/* ----------------------------
+   1. [attr] - element has the attribute (any value)
+---------------------------- */
 [disabled] {
   background-color: #eee;
   color: #999;
+  cursor: not-allowed;
 }
 
-/* [attr="value"] - exact match */
+[required] {
+  border: 2px solid orange;
+}
+
+/* ----------------------------
+   2. [attr="value"] - exact value match
+---------------------------- */
 input[type="text"] {
   border: 2px solid dodgerblue;
 }
 
-/* [attr~="value"] - contains word in space-separated list */
+input[type="password"] {
+  border: 2px solid purple;
+}
+
+input[type="email"] {
+  border: 2px solid seagreen;
+}
+
+/* ----------------------------
+   3. [attr~="value"] - value exists as one word
+      in a space-separated list
+---------------------------- */
 [class~="tag"] {
   background-color: lightyellow;
   padding: 4px 8px;
+  display: inline-block;
 }
 
-/* [attr^="value"] - starts with */
+[class~="featured"] {
+  border: 2px dashed gold;
+}
+
+/* ----------------------------
+   4. [attr|="value"] - exact value OR starts with "value-"
+---------------------------- */
+[lang|="en"] {
+  font-style: italic;
+}
+
+/* ----------------------------
+   5. [attr^="value"] - starts with
+---------------------------- */
 a[href^="https"] {
   color: green;
 }
 
-/* [attr$="value"] - ends with */
+a[href^="tel:"] {
+  color: darkorange;
+}
+
+/* ----------------------------
+   6. [attr$="value"] - ends with
+---------------------------- */
 a[href$=".pdf"] {
   color: crimson;
 }
 
-/* [attr*="value"] - contains */
+a[href$=".zip"] {
+  color: brown;
+}
+
+/* ----------------------------
+   7. [attr*="value"] - contains substring anywhere
+---------------------------- */
 a[href*="example"] {
   text-decoration: underline wavy;
 }
 
-/* [attr|="value"] - exact or starts with value- */
-[lang|="en"] {
-  font-style: italic;
+/* ----------------------------
+   8. Case-insensitive matching with "i" flag
+---------------------------- */
+[data-status="active" i] {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* ----------------------------
+   9. Combining multiple attribute selectors
+---------------------------- */
+input[type="text"][required] {
+  border-color: red;
+}
+
+/* ----------------------------
+   10. Attribute selector combined with class/element
+---------------------------- */
+.demo-item[data-status="active" i] {
+  font-weight: bold;
 }

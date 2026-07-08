@@ -1,23 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Attribute Selectors</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Attribute Selectors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>1. [attr] - has attribute</h2>
+    <input type="text" disabled placeholder="disabled input" />
+    <input type="text" required placeholder="required input" />
 
-  <input type="text" placeholder="type input">
-  <input type="text" disabled placeholder="disabled input">
+    <h2>2. [attr="value"] - exact match</h2>
+    <input type="text" placeholder="text input" />
+    <input type="password" placeholder="password input" />
+    <input type="email" placeholder="email input" />
 
-  <p class="tag">tag class</p>
+    <h2>3. [attr~="value"] - word in space-separated list</h2>
+    <p class="tag">tag only</p>
+    <p class="tag featured">tag + featured</p>
 
-  <p><a href="https://example.com">Secure link (starts with https)</a></p>
-  <p><a href="report.pdf">PDF link (ends with .pdf)</a></p>
-  <p><a href="https://example.com/page">Contains "example"</a></p>
+    <h2>4. [attr|="value"] - exact or starts with "value-"</h2>
+    <p lang="en">lang="en"</p>
+    <p lang="en-US">lang="en-US"</p>
 
-  <p lang="en">English text</p>
-  <p lang="en-US">English-US text</p>
+    <h2>5. [attr^="value"] - starts with</h2>
+    <p><a href="https://example.com">https link</a></p>
+    <p><a href="tel:12345">tel: link</a></p>
 
-</body>
+    <h2>6. [attr$="value"] - ends with</h2>
+    <p><a href="report.pdf">report.pdf</a></p>
+    <p><a href="files.zip">files.zip</a></p>
+
+    <h2>7. [attr*="value"] - contains substring</h2>
+    <p><a href="https://example.com/page">contains "example"</a></p>
+
+    <h2>8. Case-insensitive [attr="value" i]</h2>
+    <div class="demo-item" data-status="Active">data-status="Active"</div>
+    <div class="demo-item" data-status="ACTIVE">data-status="ACTIVE"</div>
+
+    <h2>9. Combined attribute selectors</h2>
+    <input type="text" required placeholder="text + required" />
+
+    <h2>10. Attribute + class combined</h2>
+    <div class="demo-item" data-status="active">
+      demo-item with active status
+    </div>
+  </body>
 </html>
